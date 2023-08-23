@@ -26,7 +26,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "node src/index.js"
+    "start": "node src/index.js",
+    "test": "(eslint lib || true) && jest"
   },
   "repository": {
     "type": "git",
