@@ -89,7 +89,7 @@ const b5 = new MessageButton().setLabel(`Play`).setCustomId(`play`).setEmoji(`11
  const collector = m.createMessageComponentCollector({ filter, componentType: 'BUTTON', time: 30000 });
     
   const played = new MessageEmbed()
-                    .setColor("#DDBD86")
+                    .setColor("#000000")
                     .setDescription(`
 <:notes:1119915814733217843> Successfully joined and bound to ${interaction.member.voice.channel}.
 <:blank:1120331253569302619><:dvd:1119915776732827778> **You can enable 24/7 mode by voting here.**`)
