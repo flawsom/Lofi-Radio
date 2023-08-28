@@ -90,6 +90,11 @@ if(station == "Anime lo-fi")
  np = study.words[Math.floor((Math.random() * study.words.length))];
 }
 
+if(station == "Ashy's lo-fi")
+{
+  const ashy = require('../../songs/ashy.json');
+ np = ashy.words[Math.floor((Math.random() * ashy.words.length))];
+}
     let query = np;
 
     const player = await client.manager.createPlayer({
@@ -108,13 +113,13 @@ if(station == "Anime lo-fi")
     else player.queue.add(result.tracks[0]);
 
  const played = new MessageEmbed()
-                    .setColor("#DDBD86")
+                    .setColor("#ffa0a0")
                     .setDescription(`
-<:notes:1119915814733217843> Successfully joined and bound to ${interaction.member.voice.channel}.
-<:blank:1120331253569302619><:dvd:1119915776732827778> **You can enable 24/7 mode by voting here.**`)
+<:notes:1145228360897802240> Successfully joined and bound to ${interaction.member.voice.channel}.
+<:blank:1145228295592489032><:dvd:1145228306166317138> **You can enable 24/7 mode by following here.**`)
 
- const bb = new MessageButton().setLabel(`Vote for ${client.user.username}`).setEmoji('1119915795565269112')
-    .setURL(`https://discord.gg/aromax-development-708565122188312579`)
+ const bb = new MessageButton().setLabel(`Follow ${client.user.username}' Creator`).setEmoji('1145248506144100365')
+    .setURL(`https://www.instagram.com/vibes.him/`)
 	.setStyle(`LINK`).setDisabled(false)
 
 if (result.type === "PLAYLIST") {

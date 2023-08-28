@@ -38,7 +38,7 @@ module.exports = {
         let data = await db.findOne({ Guild: interaction.guildId });
         const input = interaction.options.getString('toggledj')
 
-        if (!data) return interaction.editReply({ embeds: [new MessageEmbed().setDescription(`<:dj:1119915773742288917>  Don't have any dj role(s) setuped.`).setColor(client.embedColor)] })
+        if (!data) return interaction.editReply({ embeds: [new MessageEmbed().setDescription(`<:dj:1145228303880433754>  Don't have any dj role(s) setuped.`).setColor(client.embedColor)] })
         if (input === `dj_on`) {
             let mode = false;
             if (!data.Mode) mode = true;
@@ -46,7 +46,7 @@ module.exports = {
             await data.save();
             const thing = new MessageEmbed()
                 .setColor(client.embedColor)
-                .setDescription(`<:dj:1119915773742288917>  **DJ mode is successfully **\`Enabled.\``)
+                .setDescription(`<:dj:1145228303880433754>  **DJ mode is successfully **\`Enabled.\``)
             await interaction.editReply({ embeds: [thing] })
         }
 
@@ -57,7 +57,7 @@ module.exports = {
             await data.save();
             const thing = new MessageEmbed()
                 .setColor(client.embedColor)
-                .setDescription(`<:dj:1119915773742288917>  **DJ mode is successfully** \`Disabled\`.`)
+                .setDescription(`<:dj:1145228303880433754>  **DJ mode is successfully** \`Disabled\`.`)
             return await interaction.editReply({ embeds: [thing] })
         }
 

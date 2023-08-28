@@ -36,29 +36,29 @@ module.exports = {
             await data.save();
 
 const thing = new MessageEmbed()
-  .setAuthor({ name: `${client.user.username} - DJRoles`, iconURL: client.user.displayAvatarURL(), url: `https://discord.gg/aromax-development-708565122188312579` })
+  .setAuthor({ name: `${client.user.username} - DJRoles`, iconURL: client.user.displayAvatarURL(), url: `https://discord.gg/islacafe` })
   
-.setDescription(`<:dj:1119915773742288917> **Successfully added DJ Role in this server** 
-<:blank:1120331253569302619><:star:1119915839064379472> **Role:** <@&${role}>.`)
+.setDescription(`<:dj:1145228303880433754> **Successfully added DJ Role in this server** 
+<:blank:1145228295592489032><:star:1145228385925222492> **Role:** <@&${role}>.`)
 .setColor(client.embedColor);
 
 
 
      const things   =  new MessageEmbed()
-       .setAuthor({ name: `${client.user.username} - DJRoles`, iconURL: client.user.displayAvatarURL(), url: `https://discord.gg/aromax-development-708565122188312579` })
+       .setAuthor({ name: `${client.user.username} - DJRoles`, iconURL: client.user.displayAvatarURL(), url: `https://discord.gg/islacafe` })
        
-.setDescription(`<:dj:1119915773742288917> **Role already exist in this server.** 
-<:blank:1120331253569302619><:star:1119915839064379472> **Role:** <@&${role}>.`)
+.setDescription(`<:dj:1145228303880433754> **Role already exist in this server.** 
+<:blank:1145228295592489032><:star:1145228385925222492> **Role:** <@&${role}>.`)
 .setColor(client.embedColor);
           
           
             return await interaction.editReply({ embeds: [thing] })
         } else {
           const thing = new MessageEmbed()
-  .setAuthor({ name: `${client.user.username} - DJRoles`, iconURL: client.user.displayAvatarURL(), url: `https://discord.gg/aromax-development-708565122188312579` })
+  .setAuthor({ name: `${client.user.username} - DJRoles`, iconURL: client.user.displayAvatarURL(), url: `https://discord.gg/islacafe` })
   
-.setDescription(`<:dj:1119915773742288917> **Successfully added DJ Role in this server** 
-<:blank:1120331253569302619><:star:1119915839064379472> **Role:** <@&${role}>.`)
+.setDescription(`<:dj:1145228303880433754> **Successfully added DJ Role in this server** 
+<:blank:1145228295592489032><:star:1145228385925222492> **Role:** <@&${role}>.`)
 .setColor(client.embedColor);
             let rolecheck = data.Roles.find((x) => x === role.id);
             if (rolecheck) return interaction.editReply({ embeds: [things] })

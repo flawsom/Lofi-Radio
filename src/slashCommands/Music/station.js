@@ -2,35 +2,35 @@ const { MessageEmbed, MessageActionRow, MessageSelectMenu, CommandInteraction, C
 const db = require("../../schema/autoReconnect");
 const db1 = require('../../schema/station');
 module.exports = {
-    name: 'station',
-    description: 'Changes the radio station/theme.',
-    userPrams: [],
-    botPrams: ['EMBED_LINKS'],
-    player: false,
-    dj: true,
-    inVoiceChannel: false,
-    sameVoiceChannel: false,
+  name: 'station',
+  description: 'Changes the radio station/theme.',
+  userPrams: [],
+  botPrams: ['EMBED_LINKS'],
+  player: false,
+  dj: true,
+  inVoiceChannel: false,
+  sameVoiceChannel: false,
 
-    /**
-     *
-     * @param {Client} client
-     * @param {CommandInteraction} interaction
-     */
+  /**
+   *
+   * @param {Client} client
+   * @param {CommandInteraction} interaction
+   */
 
-    run: async (client, interaction) => {
-       await interaction.deferReply({
-        ephemeral: false,
-       });
-  let station = "Lofi Radio (Default)"
-const ress = await db1.findOne({ Guild: interaction.guildId });
- if(ress) station = ress.Radio;
-      
-            let thing = new MessageEmbed()
-                .setColor(client.embedColor)
-                .setDescription(`<:radio:1119915830344437790> Current Station: **${station}**`)
+  run: async (client, interaction) => {
+    await interaction.deferReply({
+      ephemeral: false,
+    });
+    let station = "Lofi Radio (Default)"
+    const ress = await db1.findOne({ Guild: interaction.guildId });
+    if (ress) station = ress.Radio;
+
+    let thing = new MessageEmbed()
+      .setColor(client.embedColor)
+      .setDescription(`<:radio:1145228373812056074> Current Station: **${station}**`)
 
 
- const row = new MessageActionRow()
+    const row = new MessageActionRow()
       .addComponents(
         new MessageSelectMenu()
           .setCustomId('station')
@@ -41,27 +41,32 @@ const ress = await db1.findOne({ Guild: interaction.guildId });
             {
               label: 'Anime lo-fi',
               value: 'anime',
-              emoji: '🌸',
+              emoji: '<a:anime:1145612443154919496>',
             },
             {
               label: ' Sleep lo-fi',
               value: 'sleep',
-              emoji: '😴',
+              emoji: '<a:sleep:1145612452768251964>',
             },
             {
               label: 'Study lo-fi',
               value: 'study',
-              emoji: '📖',
+              emoji: '<a:book:1145612445705048096>',
+            },
+            {
+              label: "Ashy's lo-fi",
+              value: 'ashy',
+              emoji: '<a:girl:1145607144801054860>',
             }
           ])
       )
 
 
-       const row2 = new MessageActionRow()
+    const row2 = new MessageActionRow()
       .addComponents(
         new MessageSelectMenu()
           .setCustomId('dstation')
-        .setDisabled(true)
+          .setDisabled(true)
           .setMinValues(1)
           .setMaxValues(1)
           .setPlaceholder('Lofi Radio Stations')
@@ -80,11 +85,17 @@ const ress = await db1.findOne({ Guild: interaction.guildId });
               label: 'Study lo-fi',
               value: 'study',
               emoji: '📖',
+            },
+            {
+              label: "Ashy's lo-fi",
+              value: 'ashy',
+              emoji: '<a:girll:1145607144801054860>',
             }
+
           ])
       )
-      
-        const m =  await  interaction.followUp({ embeds: [thing], components: [row] })
+
+    const m = await interaction.followUp({ embeds: [thing], components: [row] })
 
     const collector = m.createMessageComponentCollector({
       filter: (i) => {
@@ -104,120 +115,148 @@ const ress = await db1.findOne({ Guild: interaction.guildId });
 
 
 
-collector.on('end', async () => {
+    collector.on('end', async () => {
       if (!m) return;
       return m.edit({ components: [row2] }).catch(() => { });
     });
 
-      
-      collector.on("collect", async i => {
+
+    collector.on("collect", async i => {
       if (!i.deferred) i.deferUpdate();
       const options = i.values[0];
-if (options === 'anime') {
-    
-         let ani = new MessageEmbed()
-                .setColor(client.embedColor)
-                .setDescription(`<:radio:1119915830344437790> Current Station: **Anime lo-fi** `)
-  
+      if (options === 'anime') {
 
- if (ress) {
-      ress.oldradio = station;
-      ress.Radio = "Anime lo-fi";
-      await ress.save()
-              if (!m) return; 
-  m.edit({
-          embeds: [ani]
-        });
-    } else {
-      const newData = new db1({
-        Guild: interaction.guildId,
-        Radio: "Anime lo-fi",
-        oldradio: station
-      });
-           if (!m) return; 
-  m.edit({
-          embeds: [ani]
-        });
-      await newData.save()
-      
-    }
-  
-      // const newData = new db1({
-      //   Guild: interaction.guildId,
-      //   Radio: "Anime lo-fi",
-      //   oldradio: "Lofi Radio (Default)"
-      // });
-      // await newData.save()
-  
+        let ani = new MessageEmbed()
+          .setColor(client.embedColor)
+          .setDescription(`<:radio:1145228373812056074> Current Station: **Anime lo-fi** `)
+
+
+        if (ress) {
+          ress.oldradio = station;
+          ress.Radio = "Anime lo-fi";
+          await ress.save()
+          if (!m) return;
+          m.edit({
+            embeds: [ani]
+          });
+        } else {
+          const newData = new db1({
+            Guild: interaction.guildId,
+            Radio: "Anime lo-fi",
+            oldradio: station
+          });
+          if (!m) return;
+          m.edit({
+            embeds: [ani]
+          });
+          await newData.save()
+
+        }
+
+        // const newData = new db1({
+        //   Guild: interaction.guildId,
+        //   Radio: "Anime lo-fi",
+        //   oldradio: "Lofi Radio (Default)"
+        // });
+        // await newData.save()
+
 
       }
 
-        if (options === 'sleep') {
-    
-         let slp = new MessageEmbed()
-                .setColor(client.embedColor)
-                .setDescription(`<:radio:1119915830344437790> Current Station: **Sleep lo-fi** `)
-  
-               if (ress) {
-      ress.oldradio = station;
-      ress.Radio = "Sleep lo-fi";
-      await ress.save()
-              if (!m) return; 
-  m.edit({
-          embeds: [slp]
-        });
-    } else {
-      const newData = new db1({
-        Guild: interaction.guildId,
-        Radio: "Sleep lo-fi",
-        oldradio: station
-      });
-           if (!m) return; 
-  m.edit({
-          embeds: [slp]
-        });
-      await newData.save()
-      
-    }
-        }
+      if (options === 'sleep') {
 
-         if (options === 'study') {
-    
-         let sty = new MessageEmbed()
-                .setColor(client.embedColor)
-                .setDescription(`<:radio:1119915830344437790> Current Station: **Study lo-fi** `)
-  
-               if (ress) {
-      ress.oldradio = station;
-      ress.Radio = "Study lo-fi";
-      await ress.save()
-              if (!m) return; 
-  m.edit({
-          embeds: [sty]
-        });
-    } else {
-      const newData = new db1({
-        Guild: interaction.guildId,
-        Radio: "Study lo-fi",
-        oldradio: station
-      });
-           if (!m) return; 
-  m.edit({
-          embeds: [sty]
-        });
-      await newData.save()
-      
-    }
+        let slp = new MessageEmbed()
+          .setColor(client.embedColor)
+          .setDescription(`<:radio:1145228373812056074> Current Station: **Sleep lo-fi** `)
+
+        if (ress) {
+          ress.oldradio = station;
+          ress.Radio = "Sleep lo-fi";
+          await ress.save()
+          if (!m) return;
+          m.edit({
+            embeds: [slp]
+          });
+        } else {
+          const newData = new db1({
+            Guild: interaction.guildId,
+            Radio: "Sleep lo-fi",
+            oldradio: station
+          });
+          if (!m) return;
+          m.edit({
+            embeds: [slp]
+          });
+          await newData.save()
+
+        }
+      }
+
+      if (options === 'study') {
+
+        let sty = new MessageEmbed()
+          .setColor(client.embedColor)
+          .setDescription(`<:radio:1145228373812056074> Current Station: **Study lo-fi** `)
+
+        if (ress) {
+          ress.oldradio = station;
+          ress.Radio = "Study lo-fi";
+          await ress.save()
+          if (!m) return;
+          m.edit({
+            embeds: [sty]
+          });
+        } else {
+          const newData = new db1({
+            Guild: interaction.guildId,
+            Radio: "Study lo-fi",
+            oldradio: station
+          });
+          if (!m) return;
+          m.edit({
+            embeds: [sty]
+          });
+          await newData.save()
+
+        }
+      }
+      if (options === 'ashy') {
+
+        let ash = new MessageEmbed()
+          .setColor(client.embedColor)
+          .setDescription(`<:radio:1145228373812056074> Current Station: **Ashy's lo-fi** `)
+
+        if (ress) {
+          ress.oldradio = station;
+          ress.Radio = "Ashy's lo-fi";
+          await ress.save()
+          if (!m) return;
+          m.edit({
+            embeds: [ash]
+          });
+        } else {
+          const newData = new db1({
+            Guild: interaction.guildId,
+            Radio: "Ashy's lo-fi",
+            oldradio: station
+          });
+          if (!m) return;
+          m.edit({
+            embeds: [ash]
+          });
+          await newData.save()
+
+        }
       }
 
 
-        
-
-      })
 
 
+    })
 
-      
-        }
 
-    }
+
+
+  }
+
+}

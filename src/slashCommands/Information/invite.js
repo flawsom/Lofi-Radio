@@ -24,13 +24,13 @@ module.exports = {
         new MessageButton()
           .setLabel("Invite")
           .setStyle("LINK")
-        .setEmoji("1119915791521955970")
+        .setEmoji("1145228339263590412")
           .setURL(invite)
       );
 
     const mainPage = new MessageEmbed()
-      .setAuthor({ name: `${client.user.username}'s' invite`, iconURL: client.user.displayAvatarURL(), url: `https://discord.gg/aromax-development-708565122188312579` })
-      .setDescription(`<:invite:1119915791521955970> **Click [Here](${invite}) To Invite Me **`)
+      .setAuthor({ name: `${client.user.username}'s' invite`, iconURL: client.user.displayAvatarURL(), url: `https://discord.com/api/oauth2/authorize?client_id=1145226299221213184&permissions=8&scope=applications.commands%20bot` })
+      .setDescription(`<:invite:1145228339263590412> **Click [Here](${invite}) To Invite Me **`)
       .setColor(color)
     interaction.editReply({ embeds: [mainPage], components: [row] })
   }

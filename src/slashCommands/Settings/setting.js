@@ -36,19 +36,19 @@ if(!ress){
     
     
 const np = new MessageEmbed()
-  .setAuthor({ name: `${client.user.username} Setting`, iconURL: client.user.displayAvatarURL(), url: `https://discord.gg/aromax-development-708565122188312579` })
+  .setAuthor({ name: `${client.user.username} Setting`, iconURL: client.user.displayAvatarURL(), url: `https://discord.gg/islacafe` })
 //                     .setDescription(`
-// <:notes:1119915814733217843> **Playing Song:**
-// <:blank:1120331253569302619><:next:1119915811415539722> **${song.title}**`)
+// <:notes:1145228360897802240> **Playing Song:**
+// <:blank:1145228295592489032><:next:1145228356892246028> **${song.title}**`)
 
       .addFields([
         {
-          name: `<:radio:1119915830344437790> Radio Station`,
+          name: `<:radio:1145228373812056074> Radio Station`,
           value: `${station}`,
           inline: true,
         },
         {
-          name: `<:mode:1119915805056966717> Radio Mode`,
+          name: `<:mode:1145228352408539157> Radio Mode`,
           value: `${mode}`,
           inline: true,
         },

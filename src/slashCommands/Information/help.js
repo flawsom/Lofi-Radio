@@ -28,45 +28,45 @@ module.exports = {
     
 
     const embed = new MessageEmbed()
-        .setColor(`#DDBD86`)
-          .setAuthor({ name: `${client.user.username}`, iconURL: client.user.displayAvatarURL(), url: `https://discord.gg/aromax-development-708565122188312579` })
+        .setColor(`#ffa0a0`)
+          .setAuthor({ name: `${client.user.username}`, iconURL: client.user.displayAvatarURL(), url: `https://discord.gg/islacafe` })
 
           .setDescription(`
-<:notes:1119915814733217843> **Music:**
-<:blank:1120331253569302619><:next:1119915811415539722> **/play:** Joins your voice channel and starts playing 24/7.
-<:blank:1120331253569302619><:stop:1119915842893783052> **/stop:** Leaves the voice channel.
-<:blank:1120331253569302619><:dvd:1119915776732827778> **/song:** Shows the current playing song.
-<:blank:1120331253569302619><:radio:1119915830344437790> **/station:** Changes the radio station/theme.
-<:blank:1120331253569302619><:loud:1119915800535511070> **/volume:** Shows or changes the current volume.
-<:blank:1120331253569302619><:sleep:1119915834886856785> **/sleep:** Sets a sleep timer.
-<:star:1119915839064379472> **Profiles:**
-<:blank:1120331253569302619><:profile:1119915826326278265> **/profile:** Shows your profile.
-<:blank:1120331253569302619><:am:1121668225839661076> **/remove:** Removes the liked song.
-<:blank:1120331253569302619><:floppy_disk:1119915780931338280> **/collection:** Shows your liked songs collection.
-<:config:1119915722534039612> **Config:**
-<:blank:1120331253569302619><:mode:1119915805056966717> **/mode:** Switches between radio modes.
-<:blank:1120331253569302619><:dj:1119915773742288917> **/djrole:** Sets which roles are considered DJs.
-<:blank:1120331253569302619><:gear:1119915784756531331> **/settings:** Shows and configures server settings.
-<:blank:1120331253569302619><:premium:1119915823964893214>  **/premium:** Shows information about Lofi Radio premium.
-<:info:1119915789030535178> **Info:**
-<:blank:1120331253569302619><:telegram:1119915847809515671> **/support:** Send us a message or [join](https://discord.gg/aromax-development-708565122188312579) our support server.
-<:blank:1120331253569302619><:like:1119915795565269112> **/vote:** Vote for Lofi Radio.
-<:blank:1120331253569302619><:invite:1119915791521955970> **/invite:** [Invite](https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot%20applications.commands) Lofi Radio to your server.
+<:notes:1145228360897802240> **Music:**
+<:blank:1145228295592489032><:next:1145228356892246028> **/play:** Joins your voice channel and starts playing 24/7.
+<:blank:1145228295592489032><:stop:1145228389901406299> **/stop:** Leaves the voice channel.
+<:blank:1145228295592489032><:dvd:1145228306166317138> **/song:** Shows the current playing song.
+<:blank:1145228295592489032><:radio:1145228373812056074> **/station:** Changes the radio station/theme.
+<:blank:1145228295592489032><:loud:1145228347949981757> **/volume:** Shows or changes the current volume.
+<:blank:1145228295592489032><:sleep:1145228377800847371> **/sleep:** Sets a sleep timer.
+<:star:1145228385925222492> **Profiles:**
+<:blank:1145228295592489032><:profile:1145228369231884290> **/profile:** Shows your profile.
+<:blank:1145228295592489032><:am:1145228293369516033> **/remove:** Removes the liked song.
+<:blank:1145228295592489032><:floppy_disk:1145228318606630932> **/collection:** Shows your liked songs collection.
+<:config:1145228299841314877> **Config:**
+<:blank:1145228295592489032><:mode:1145228352408539157> **/mode:** Switches between radio modes.
+<:blank:1145228295592489032><:dj:1145228303880433754> **/djrole:** Sets which roles are considered DJs.
+<:blank:1145228295592489032><:gear:1145228322587037716> **/settings:** Shows and configures server settings.
+<:blank:1145228295592489032><:premium:1145228365356343336>  **/premium:** Shows information about Lofi Radio premium.
+<:info:1145228335438372914> **Info:**
+<:blank:1145228295592489032><:telegram:1145228392485109770> **/support:** Send us a message or [Join](https://discord.gg/islacafe) our support server.
+<:blank:1145228295592489032><:like:1145228343285915719> **/follow:** [Follow](https://www.instagram.com/vibes.him/) Follow SiMi's Creator.
+<:blank:1145228295592489032><:invite:1145228339263590412> **/invite:** [Invite](https://discord.com/api/oauth2/authorize?client_id=1145226299221213184&permissions=8&scope=applications.commands%20bot) Lofi Radio to your server.
 `)
 
-const b1 = new MessageButton().setLabel(`Play`).setCustomId(`play`).setEmoji(`1119915811415539722`).setStyle('SECONDARY').setDisabled(false)
-        const b2 = new MessageButton().setLabel(`Stop`).setCustomId(`stop`).setEmoji(`1119915842893783052`).setStyle('SECONDARY').setDisabled(false)
-        const b3 = new MessageButton().setLabel(`Vote`).setEmoji('1119915795565269112')
-    .setURL(`https://discord.gg/aromax-development-708565122188312579`)
+const b1 = new MessageButton().setLabel(`Play`).setCustomId(`play`).setEmoji(`1145228356892246028`).setStyle('SECONDARY').setDisabled(false)
+        const b2 = new MessageButton().setLabel(`Stop`).setCustomId(`stop`).setEmoji(`1145228389901406299`).setStyle('SECONDARY').setDisabled(false)
+        const b3 = new MessageButton().setLabel(`Follow`).setEmoji('1145248506144100365')
+    .setURL(`https://www.instagram.com/vibes.him/`)
 	.setStyle(`LINK`).setDisabled(false)
         const b4 = new MessageButton() .setLabel(`Invite`)
-      .setEmoji('1119915791521955970')
+      .setEmoji('1145228339263590412')
    .setURL(`https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot%20applications.commands`)
     .setStyle(`LINK`).setDisabled(false)
 
 
-const b5 = new MessageButton().setLabel(`Play`).setCustomId(`play`).setEmoji(`1119915811415539722`).setStyle('SECONDARY').setDisabled(true)
-        const b6 = new MessageButton().setLabel(`Stop`).setCustomId(`stop`).setEmoji(`1119915842893783052`).setStyle('SECONDARY').setDisabled(true)
+const b5 = new MessageButton().setLabel(`Play`).setCustomId(`play`).setEmoji(`1145228356892246028`).setStyle('SECONDARY').setDisabled(true)
+        const b6 = new MessageButton().setLabel(`Stop`).setCustomId(`stop`).setEmoji(`1145228389901406299`).setStyle('SECONDARY').setDisabled(true)
 
     const drow = new MessageActionRow().addComponents(b5, b6, b3, b4);
 
@@ -89,10 +89,10 @@ const b5 = new MessageButton().setLabel(`Play`).setCustomId(`play`).setEmoji(`11
  const collector = m.createMessageComponentCollector({ filter, componentType: 'BUTTON', time: 30000 });
     
   const played = new MessageEmbed()
-                    .setColor("#000000")
+                    .setColor("#ffa0a0")
                     .setDescription(`
-<:notes:1119915814733217843> Successfully joined and bound to ${interaction.member.voice.channel}.
-<:blank:1120331253569302619><:dvd:1119915776732827778> **You can enable 24/7 mode by voting here.**`)
+<:notes:1145228360897802240> Successfully joined and bound to ${interaction.member.voice.channel}.
+<:blank:1145228295592489032><:dvd:1145228306166317138> **You can enable 24/7 mode by following here.**`)
     
     collector.on('end', async () => {
       if (!m) return;
@@ -107,16 +107,16 @@ const b5 = new MessageButton().setLabel(`Play`).setCustomId(`play`).setEmoji(`11
           if (interaction.guild.members.me.voice.channelId !== interaction.member.voice.channelId) {
             return await i
               .followUp({ embeds: [{
-      color: '#DDBD86',
-      description: `<:loud:1119915800535511070> You have to be in same voice channel to use this command.`
+      color: '#ffa0a0',
+      description: `<:loud:1145228347949981757> You have to be in same voice channel to use this command.`
     }], ephemeral: true})
               .catch(() => { });
           }
         } else if (!i.member.voice.channel) {
         return await i
           .followUp({ embeds: [{
-      color: '#DDBD86',
-      description: `<:loud:1119915800535511070> You have to be connected to a voice channel to use this command.`
+      color: '#ffa0a0',
+      description: `<:loud:1145228347949981757> You have to be connected to a voice channel to use this command.`
     }], ephemeral: true})
           .catch(() => { });
       } else {
@@ -167,6 +167,12 @@ if(station == "Anime lo-fi")
  np = study.words[Math.floor((Math.random() * study.words.length))];
 }
 
+if(station == "Ashy's lo-fi")
+{
+  const ashy = require('../../songs/ashy.json');
+ np = ashy.words[Math.floor((Math.random() * ashy.words.length))];
+}
+
     let query = np;
 
  
@@ -175,8 +181,8 @@ if(station == "Anime lo-fi")
 
     if (!result.tracks.length) return interaction.editReply({ content: 'No result was found' });
     const tracks = result.tracks;
- const bb = new MessageButton().setLabel(`Vote for ${client.user.username}`).setEmoji('1119915795565269112')
-    .setURL(`https://discord.gg/aromax-development-708565122188312579`)
+ const bb = new MessageButton().setLabel(`Follow ${client.user.username}`).setEmoji('1145248506144100365')
+    .setURL(`https://www.instagram.com/vibes.him/`)
 	.setStyle(`LINK`).setDisabled(false)
                 
                       if (result.type === "PLAYLIST") for (let track of result.tracks) player.queue.add(track);
@@ -195,7 +201,7 @@ const player = client.manager.players.get(i.guild.id);
           if (interaction.guild.members.me.voice.channelId !== interaction.member.voice.channelId) {
             return await i
               .followUp({ embeds: [{
-      color: '#DDBD86',
+      color: '#ffa0a0',
       description: `👋`
     }], ephemeral: true})
               .catch(() => { });
@@ -204,7 +210,7 @@ const player = client.manager.players.get(i.guild.id);
         if (!i.member.voice.channel) {
         return await i
           .followUp({ embeds: [{
-      color: '#DDBD86',
+      color: '#ffa0a0',
       description: `👋`
     }], ephemeral: true})
           .catch(() => { });
@@ -214,14 +220,14 @@ if(player.queue.current) {
 await player.destroy(interaction.guild.id);
 
 await i.followUp({ embeds: [{
-      color: '#DDBD86',
-      description: `<:stop:1119915842893783052> Successfully disconnected from ${i.member.voice.channel}
+      color: '#ffa0a0',
+      description: `<:stop:1145228389901406299> Successfully disconnected from ${i.member.voice.channel}
  `
     }]})
 } if(player.queue.current == "undefined") {
    return await i
           .followUp({ embeds: [{
-      color: '#DDBD86',
+      color: '#ffa0a0',
       description: `👋`
     }], ephemeral: true})
 }

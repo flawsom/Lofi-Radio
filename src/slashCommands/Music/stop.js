@@ -29,8 +29,8 @@ module.exports = {
 await player.destroy(interaction.guild.id);
 
 await interaction.followUp({ embeds: [{
-      color: '#DDBD86',
-      description: `<:stop:1119915842893783052> Successfully disconnected from ${interaction.member.voice.channel}
+      color: '#ffa0a0',
+      description: `<:stop:1145228389901406299> Successfully disconnected from ${interaction.member.voice.channel}
  `
     }]})
             

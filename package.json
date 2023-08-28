@@ -31,17 +31,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/diwasatreya/Lofi-Radio.git"
+    "url": "git+https://github.com/flawsom/Lofi-Radio.git"
   },
   "keywords": [
     "lavalink",
     "discord-lofi",
     "discord-music-bot"
   ],
-  "author": "diwasatreya",
+  "author": "Siba",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/diwasatreya/Lofi-Radio/issues"
+    "url": "https://github.com/flawsom/Lofi-Radio/issues"
   },
-  "homepage": "https://github.com/diwasatreya/Lofi-Radio#readme"
+  "homepage": "https://github.com/flawsom/Lofi-Radio#readme"
 }

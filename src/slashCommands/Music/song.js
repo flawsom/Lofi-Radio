@@ -32,10 +32,10 @@ module.exports = {
       
     
 const np = new MessageEmbed()
-  .setAuthor({ name: `${client.user.username}`, iconURL: client.user.displayAvatarURL(), url: `https://discord.gg/aromax-development-708565122188312579` })
+  .setAuthor({ name: `${client.user.username}`, iconURL: client.user.displayAvatarURL(), url: `https://discord.gg/islacafe` })
                     .setDescription(`
-<:notes:1119915814733217843> **Playing Song:**
-<:blank:1120331253569302619><:next:1119915811415539722> **${song.title}**`)
+<:notes:1145228360897802240> **Playing Song:**
+<:blank:1145228295592489032><:next:1145228356892246028> **${song.title}**`)
 
       .addFields([
         {
@@ -45,7 +45,7 @@ const np = new MessageEmbed()
         },
         {
           name: `Developer`,
-          value: `<:profile:1119915826326278265> **[Youtube](https://www.youtube.com/c/diwasatreya)**`,
+          value: `<:profile:1145228369231884290> **[Owner's Profile](https://discord.com/users/459620783703195648)**`,
           inline: true,
         },
       ])
@@ -56,7 +56,7 @@ const np = new MessageEmbed()
 	.setStyle(`LINK`).setDisabled(false)
         const yt = new MessageButton()
       .setEmoji('1119915826326278265')
-   .setURL(`https://www.youtube.com/c/diwasatreya`)
+   .setURL(`https://discord.com/users/459620783703195648`)
     .setStyle(`LINK`).setDisabled(false)
 const b1 = new MessageButton().setCustomId(`like`).setEmoji(`1122029645135613953`).setStyle('SECONDARY').setDisabled(false)
         const b2 = new MessageButton().setCustomId(`down`).setEmoji(`1121856261122699385`).setStyle('SECONDARY').setDisabled(false)
@@ -142,14 +142,14 @@ const Name = "Favourite";
    const fav = new MessageEmbed()
      .setColor(client.embedColor)
                     .setDescription(`
-<:notes:1119915814733217843>** Thank you for voting!**
+<:notes:1145228360897802240>** Thank you for following!**
 This title has been saved to your collection.`)
   const sp = new MessageButton().setEmoji('1121668243116019783')
     .setURL(`${song.uri}`)
 	.setStyle(`LINK`).setDisabled(false)
         const yt = new MessageButton()
       .setEmoji('1119915826326278265')
-   .setURL(`https://www.youtube.com/c/diwasatreya`)
+   .setURL(`https://discord.com/users/459620783703195648`)
     .setStyle(`LINK`).setDisabled(false)
 const b1 = new MessageButton().setCustomId(`like`).setEmoji(`1122029645135613953`).setStyle('SECONDARY').setDisabled(true)
 const b2 = new MessageButton().setCustomId(`down`).setEmoji(`1121856261122699385`).setStyle('SECONDARY').setDisabled(true)
@@ -168,7 +168,7 @@ i.followUp({
 
    const fav = new MessageEmbed()
      .setColor(client.embedColor)
-                    .setDescription(`**<:notes:1119915814733217843> Thank you for voting!**`)
+                    .setDescription(`**<:notes:1145228360897802240> Thank you for following!**`)
 i.followUp({
   embeds: [fav], ephemeral: true
 })

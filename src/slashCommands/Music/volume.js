@@ -47,8 +47,8 @@ module.exports = {
             new MessageEmbed()
               .setColor(client.embedColor)
               .setDescription(`
-              <:error:1121723716494168134> **Invalid volume has been provided!**
-              <:blank:1120331253569302619><:gear:1119915784756531331> Use /volume <0 - 100>`),
+              <:error:1145228310406766592> **Invalid volume has been provided!**
+              <:blank:1145228295592489032><:gear:1145228322587037716> Use /volume <0 - 100>`),
           ],
         })
     }
@@ -59,22 +59,22 @@ module.exports = {
       let thing = new MessageEmbed()
         .setColor(client.embedColor)
         .setDescription(`
-              <:dvd:1119915776732827778> ** Successfully volume has been changed!**
-              <:blank:1120331253569302619><:loud:1119915800535511070> **Current Volume: ${volume}%**`);
+              <:dvd:1145228306166317138> ** Successfully volume has been changed!**
+              <:blank:1145228295592489032><:loud:1145228347949981757> **Current Volume: ${volume}%**`);
       return interaction.editReply({ embeds: [thing] });
     } else if (volume < player.volume) {
       let thing = new MessageEmbed()
         .setColor(client.embedColor)
         .setDescription(`
-              <:dvd:1119915776732827778>  **Successfully volume has been changed!**
-              <:blank:1120331253569302619><:loud:1119915800535511070> **Current Volume: ${volume}%**`);
+              <:dvd:1145228306166317138>  **Successfully volume has been changed!**
+              <:blank:1145228295592489032><:loud:1145228347949981757> **Current Volume: ${volume}%**`);
       return interaction.editReply({ embeds: [thing] });
     } else {
       let thing = new MessageEmbed()
         .setColor(client.embedColor)
         .setDescription(`
-              <:dvd:1119915776732827778>  **Successfully volume has been changed!**
-              <:blank:1120331253569302619><:loud:1119915800535511070> **Current Volume: ${volume}%**`);
+              <:dvd:1145228306166317138>  **Successfully volume has been changed!**
+              <:blank:1145228295592489032><:loud:1145228347949981757> **Current Volume: ${volume}%**`);
       return interaction.editReply({ embeds: [thing] });
     }
     

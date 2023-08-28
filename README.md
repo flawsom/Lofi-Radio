@@ -4,7 +4,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/diwasatreya/Lofi-Radio">
+  <a href="https://github.com/flawsom/Lofi-Radio">
     <img src="https://images-ext-2.discordapp.net/external/_L-BF6LDZ6x0PPbx4ABpZqm7SpEW6F2VQskVss3Rpro/%3Fsize%3D1024/https/cdn.discordapp.com/avatars/1119895957648179201/629ee93cd5140ad6809b4cc6c4912096.png?width=466&height=466" alt="Pbot-plus" width="200" height="200">
   </a>
 
@@ -14,9 +14,9 @@
     It is a discord music bot which can play lo-fi song 24/7 &  more functions of lofi radio bot
     <br />
     <br />
-    <a href="https://github.com/diwasatreya/Lofi-Radio/issues">Report Bug</a>
+    <a href="https://github.com/flawsom/Lofi-Radio/issues">Report Bug</a>
     ·
-    <a href="https://github.com/diwasatreya/Lofi-Radio/issues">Request Feature</a>
+    <a href="https://github.com/flawsom/Lofi-Radio/issues">Request Feature</a>
   </p>
 </p>
 <!-- ABOUT THE PROJECT -->
@@ -94,7 +94,7 @@ If you liked this repository, feel free to leave a star ⭐ to help promote !
 ## 🖼️ Screenshots
 <br />
 <p align="center">
-  <a href="https://github.com/diwasatreya/Lofi-Radio">
+  <a href="https://github.com/flawsom/Lofi-Radio">
     <img src="./Preview/help.png">
     <img src="./Preview/image.png">
     <img src="./Preview/sleep.png">
@@ -112,7 +112,7 @@ This bot base on the lofi-radio(verified) discord bot which is in nearby 850k se
 
 # 💌 Support Server 
 - [Error? Join US](https://discord.com/invite/aromax-development-708565122188312579)
-- [YouTube](https://www.youtube.com/c/diwasatreya)
+- [Owner's Profile](https://discord.com/users/459620783703195648)
 
 <br>
 

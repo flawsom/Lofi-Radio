@@ -35,8 +35,8 @@ const ress = await db2.findOne({ Guild: interaction.guildId });
       
             let thing = new MessageEmbed()
                 .setColor(client.embedColor)
-              .setAuthor({ name: `${client.user.username} - Modes`, iconURL: client.user.displayAvatarURL(), url: `https://discord.gg/aromax-development-708565122188312579` })
-                .setDescription(`<:dvd:1119915776732827778> Current Radio Mode: **${mode}**`)
+              .setAuthor({ name: `${client.user.username} - Modes`, iconURL: client.user.displayAvatarURL(), url: `https://discord.gg/islacafe` })
+                .setDescription(`<:dvd:1145228306166317138> Current Radio Mode: **${mode}**`)
 
 
 let b1 = new MessageButton().setLabel("24/7").setCustomId(`two`).setEmoji(`1119915805056966717`).setStyle('SECONDARY').setDisabled(false)
@@ -97,9 +97,9 @@ collector.on('end', async () => {
         if (i.customId === 'two') {
     
          let slp = new MessageEmbed()
-           .setAuthor({ name: `${client.user.username} - Modes`, iconURL: client.user.displayAvatarURL(), url: `https://discord.gg/aromax-development-708565122188312579` })
+           .setAuthor({ name: `${client.user.username} - Modes`, iconURL: client.user.displayAvatarURL(), url: `https://discord.gg/islacafe` })
                 .setColor(client.embedColor)
-                .setDescription(`<:dvd:1119915776732827778> Current Radio Mode: **24/7** `)
+                .setDescription(`<:dvd:1145228306166317138> Current Radio Mode: **24/7** `)
 
    if(!player){
      interaction.followUp({ content: "Play any song to enable 24/7", ephemeral: true})
@@ -144,8 +144,8 @@ collector.on('end', async () => {
     
          let slp = new MessageEmbed()
                 .setColor(client.embedColor)
-           .setAuthor({ name: `${client.user.username} - Modes`, iconURL: client.user.displayAvatarURL(), url: `https://discord.gg/aromax-development-708565122188312579` })
-                .setDescription(`<:dvd:1119915776732827778> Current Radio Mode: **Auto Play** `)
+           .setAuthor({ name: `${client.user.username} - Modes`, iconURL: client.user.displayAvatarURL(), url: `https://discord.gg/islacafe` })
+                .setDescription(`<:dvd:1145228306166317138> Current Radio Mode: **Auto Play** `)
 
    if(!player){
      interaction.followUp({ content: "Play any song to enable Auto Play", ephemeral: true})
@@ -181,8 +181,8 @@ interaction.editReply({ embeds: [slp], components:[row4] })
     
          let slp = new MessageEmbed()
                 .setColor(client.embedColor)
-           .setAuthor({ name: `${client.user.username} - Modes`, iconURL: client.user.displayAvatarURL(), url: `https://discord.gg/aromax-development-708565122188312579` })
-                .setDescription(`<:dvd:1119915776732827778> Current Radio Mode: **Session** `)
+           .setAuthor({ name: `${client.user.username} - Modes`, iconURL: client.user.displayAvatarURL(), url: `https://discord.gg/islacafe` })
+                .setDescription(`<:dvd:1145228306166317138> Current Radio Mode: **Session** `)
 
    if(!player){
      interaction.followUp({ content: "Play any song to enable Session", ephemeral: true})
@@ -213,14 +213,14 @@ interaction.editReply({ embeds: [slp], components:[row4] })
             if (i.customId === 'info') {
     
          let slp = new MessageEmbed()
-           .setAuthor({ name: `${client.user.username} - Help`, iconURL: client.user.displayAvatarURL(), url: `https://discord.gg/aromax-development-708565122188312579` })
+           .setAuthor({ name: `${client.user.username} - Help`, iconURL: client.user.displayAvatarURL(), url: `https://discord.gg/islacafe` })
                 .setColor(client.embedColor)
            
                 .setDescription(`
-                <:mode:1119915805056966717> **Radio Modes**
-<:blank:1120331253569302619> **Session:** Kinda like disabling the modes
-<:blank:1120331253569302619> **Auto Play:** Auto plays songs.
-<:blank:1120331253569302619> **24/7:** Always connected.
+                <:mode:1145228352408539157> **Radio Modes**
+<:blank:1145228295592489032> **Session:** Kinda like disabling the modes
+<:blank:1145228295592489032> **Auto Play:** Auto plays songs.
+<:blank:1145228295592489032> **24/7:** Always connected.
                 `)
 
 interaction.followUp({ embeds: [slp], ephemeral: true})

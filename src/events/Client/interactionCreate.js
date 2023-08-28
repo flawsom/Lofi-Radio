@@ -50,8 +50,8 @@ module.exports = {
       if (SlashCommands.inVoiceChannel && !interaction.member.voice.channel) {
         return await interaction
           .reply({ embeds: [{
-      color: '#DDBD86',
-      description: `<:loud:1119915800535511070> You have to be connected to a voice channel to use this command.`
+      color: '#ffa0a0',
+      description: `<:loud:1145228347949981757> You have to be connected to a voice channel to use this command.`
     }]})
           .catch(() => { });
       }
@@ -80,8 +80,8 @@ module.exports = {
               });
             };
             if (!pass && !interaction.member.permissions.has(perm)) return await interaction.reply({ embeds: [{
-      color: '#DDBD86',
-      description: `<:profile:1119915826326278265> **You don't have permission to use the command** \n<:blank:1120331253569302619><:dj:1119915773742288917> **Required: DJ Role**`
+      color: '#ffa0a0',
+      description: `<:profile:1145228369231884290> **You don't have permission to use the command** \n<:blank:1145228295592489032><:dj:1145228303880433754> **Required: DJ Role**`
     }], ephemeral: true})
           };
         };
@@ -96,13 +96,13 @@ module.exports = {
       } catch (error) {
         if (interaction.replied) {
           await             interaction.followUp({ embeds: [{
-      color: '#DDBD86',
+      color: '#ffa0a0',
       description: `👋`
     }], ephemeral: true})
             .catch(() => { });
         } else {
           await             interaction.followUp({ embeds: [{
-      color: '#DDBD86',
+      color: '#ffa0a0',
       description: `👋`
     }], ephemeral: true})
             .catch(() => { });
